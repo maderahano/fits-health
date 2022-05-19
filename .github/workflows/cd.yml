@@ -28,7 +28,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mdrahano12/fits-health:0.4
+        tags: mdrahano12/fits-health:0.5
     
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
@@ -40,5 +40,5 @@ jobs:
         script: |
           docker stop fits-health
           docker container rm fits-health
-          docker pull mdrahano12/fits-health:0.4
-          docker run -dp 80:8888 --name fits-health --detach mdrahano12/fits-health:0.4
+          docker pull mdrahano12/fits-health:0.5
+          docker run -dp 80:8888 --name fits-health --detach mdrahano12/fits-health:0.5
