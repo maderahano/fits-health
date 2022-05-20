@@ -10,6 +10,6 @@ FROM alpine:latest
 
 WORKDIR /pack
 
-COPY --from=builder /app/main.app ./cmd/app/main.go
+COPY --from=builder /app/main.app .
 
 CMD [ "/pack/main.app" ]
