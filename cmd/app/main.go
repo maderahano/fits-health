@@ -30,6 +30,7 @@ func main() {
 	rest.RegisterProfilKesehatanGroupAPI(e, config)
 	rest.RegisterResepMakananGroupAPI(e, config)
 	rest.RegisterJadwalGroupAPI(e, config)
+	rest.RegisterArtikelGroupAPI(e, config)
 	rest.RegisterOlahragaGroupAPI(e, config)
 
 	e.GET("/swagger/*", echoSwag.WrapHandler)
